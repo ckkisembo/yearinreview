@@ -1,0 +1,70 @@
+<%- include("partials/header.ejs") %>
+
+<!-- HERO INTRO SECTION (centered, in container) -->
+<div class="container my-3">
+  <div class="p-5 bg-light rounded-3 shadow-sm text-center">
+    <div class="py-3">
+      <h2 class="display-4 fw-bold">Spinning Class</h2>
+      <p class="fs-5 mb-4 mx-auto" style="max-width: 720px;">
+        Spinning to cut masavu, whilst also cutting cake, <span role="img" aria-label="irony">🫣</span>the irony!
+        Hope a.k.a Mona, our resident spin master, was in class that day, together with all the other ladies, enjoying the high‑energy cycling, dancing and a well‑earned cool‑down in the sauna.
+        Relive the moments that made the experience unforgettable.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- THREE-COLUMN HERO STRIP -->
+<div class="container my-5 spinning-hero">
+  <div class="row align-items-center">
+
+    <!-- LEFT COLUMN: Invitation Image (needs all text visible) -->
+    <div class="col-md-4 text-center mb-4 mb-md-0">
+      <img src="<%= photos[1].url %>" 
+           alt="<%= photos[1].alt %>" 
+           class="hero-img invitation-img">
+    </div>
+
+    <!-- MIDDLE COLUMN: Carousel -->
+    <div class="col-md-4 mb-4 mb-md-0">
+      <div id="spinCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="6000" data-bs-pause="false">
+
+        <div class="carousel-inner">
+          <% spinVideos.forEach((video, index) => { %>
+            <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
+              <video class="hero-video" autoplay muted loop playsinline>
+                <source src="<%= video.url %>" type="video/mp4">
+              </video>
+            </div>
+          <% }) %>
+
+          <!-- Spa video as last slide -->
+          <div class="carousel-item">
+            <video class="hero-video" autoplay muted loop playsinline>
+              <source src="<%= spaVideo.url %>" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#spinCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#spinCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN: After Spin Glow Photo (was fine, just on right) -->
+    <div class="col-md-4 text-center">
+      <img src="<%= photos[0].url %>" 
+           alt="<%= photos[0].alt %>" 
+           class="hero-img">
+    </div>
+
+  </div>
+</div>
+
+<%- include("partials/footer.ejs") %>

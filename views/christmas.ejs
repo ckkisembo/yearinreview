@@ -1,0 +1,64 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container my-5">
+  <div class="hero-text-box text-center mx-auto">
+    <h2 class="display-4 fw-bold">Christmas Cheer!</h2>
+    <p class="fs-5 mb-4 mx-auto" style="max-width: 720px;">
+      The Ladies showed up with their families and sang carols, played games, gave gifts and generally shared in the festive cheer!
+    </p>
+    <!-- Holly corners --> 
+    <div class="holly-corner holly-top-left"></div> 
+    <div class="holly-corner holly-bottom-right"></div>
+  </div>
+</div>
+
+<div class="container my-5">
+  <div class="row g-4">
+    <!-- Carols Carousel -->
+    <div class="col-md-4">
+      <div id="carolsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <% carolVideos.forEach((video, index) => { %>
+            <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
+              <video class="carousel-video" autoplay muted loop playsinline>
+                <source src="<%= video.url %>" type="video/mp4">
+              </video>
+            </div>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Festive Treats Carousel -->
+    <div class="col-md-4">
+      <div id="treatsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <% cakePhotos.forEach((photo, index) => { %>
+            <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
+              <img src="<%= photo.url %>" class="carousel-photo">
+            </div>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gift Sharing Carousel -->
+    <div class="col-md-4">
+      <div id="giftsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <% giftPhotos.forEach((photo, index) => { %>
+            <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
+              <img src="<%= photo.url %>" class="carousel-portrait">
+            </div>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<%- include("partials/footer.ejs") %>
+

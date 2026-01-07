@@ -1,0 +1,91 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container my-5">
+  <div class="easter-hero-text-box text-center mx-auto">
+    <h2 class="display-4 fw-bold">Christ is Risen!</h2>
+    <p class="fs-5 mb-4 mx-auto">We gathered to celebrate the Risen Lord with our own Easter Carol Service. The Ladies looking fresh in bright whites, lavender, blue and pastel colors!
+    Sara and Rebecca of the famous Gayaza Singers, were the lead choristers, however, we all pulled our weight! Miss Hobday would be proud!</p>
+    <p class="fs-5 mb-4 mx-auto">Damalie came out of kamooli, with a plus one, her youngest daughter, Irene shared a personal testimony, we had a light meal and signed off singing, "so never give up"!</p>    
+  </div>
+</div>
+
+<div class="container my-5">
+  <!-- Row 1 -->
+  <div class="row mb-2">
+    <div class="col-md-4 mb-2">
+        <div class="easter-tile">
+            <img src="/images/easter/photos/easter10.jpg" class="img-fluid rounded shadow-sm">
+        </div>      
+    </div>    
+
+    <!-- Column 2 — Photo Carousel --> 
+    <div class="col-md-4 mb-2"> 
+      <div class="easter-tile"> 
+        <div id="easterPhotoCarousel" class="carousel slide" data-bs-ride="carousel"> 
+          <div class="carousel-inner"> 
+            <div class="carousel-item active"> 
+              <img src="/images/easter/photos/easter12.jpg" class="d-block w-100 rounded shadow-sm"> 
+            </div> 
+            <div class="carousel-item"> 
+              <img src="/images/easter/photos/easter9.jpg" class="d-block w-100 rounded shadow-sm"> 
+            </div> 
+            <div class="carousel-item"> 
+              <img src="/images/easter/photos/easter8.jpg" class="d-block w-100 rounded shadow-sm"> 
+            </div> 
+            <div class="carousel-item"> 
+              <img src="/images/easter/photos/easter13.jpg" class="d-block w-100 rounded shadow-sm"> 
+            </div>
+          </div> 
+        </div> 
+      </div>       
+    </div>
+    <div class="col-md-4 mb-2">
+      <div class="easter-tile">
+          <img src="/images/easter/photos/easter2.jpg" class="img-fluid rounded shadow-sm">
+      </div>      
+    </div>    
+  </div>  
+
+  <!-- Row 2 -->
+  <div class="row">
+    <div class="col-md-4 mb-2">
+        <div class="easter-tile">
+            <img src="/images/easter/photos/easter6.jpg" class="img-fluid rounded shadow-sm">
+        </div>      
+    </div>
+
+    <div class="col-md-4 mb-2">
+        <div class="easter-tile">
+            <img src="/images/easter/photos/easter3.jpg" class="img-fluid rounded shadow-sm">
+        </div>      
+    </div>
+
+    <!-- Video Carousel -->
+    <div class="col-md-4 mb-2">
+      <div id="easterVideoCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <!-- Video 1 -->
+          <div class="carousel-item active">
+            <div class="easter-tile">
+                <video class="w-100 rounded shadow-sm" controls>
+                    <source src="/images/easter/videos/eastercakecut.mp4" type="video/mp4">
+                </video>
+            </div>            
+          </div>
+
+          <!-- Video 2 -->
+          <div class="carousel-item">
+            <div class="easter-tile">
+                <video class="w-100 rounded shadow-sm" controls>
+                    <source src="/images/easter/videos/anthem.mp4" type="video/mp4">
+                </video>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("partials/footer.ejs") %>

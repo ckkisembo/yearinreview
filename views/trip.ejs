@@ -1,0 +1,22 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container my-5">
+  <div class="text-center my-3">
+    <h2 class="display-4 fw-bold">Gal Trip</h2>
+    <div>
+      <p class="fs-5 mb-4 mx-auto" style="max-width: 720px;">The smiles and laughter, the fashion, striking poses and ofcourse the scenary! A feast for the eyes, it is obvious that the trip was so much fun!</p>
+    </div>
+  </div>
+  <div class="masonry-grid">
+    <% [...portraits, ...landscapes].forEach(photo => { %>
+      <div class="masonry-item <%= photo.orientation %>">
+        <div class="frame <%= photo.frameStyle %>">
+          <img src="<%= photo.url %>" alt="<%= photo.alt %>" class="img-fluid">
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</div>
+
+
+<%- include("partials/footer.ejs") %>

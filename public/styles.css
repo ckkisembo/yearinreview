@@ -1,0 +1,229 @@
+body {
+  font-family: "Chelsea Market", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cta-animated-card { 
+  border-radius: 3rem; 
+  color: white; 
+  background-color: var(--bs-primary); 
+  animation: colorFade 6s infinite alternate ease-in-out; 
+  box-shadow: 0 0 20px rgba(255, 182, 193, 0.5); 
+  transition: transform 0.2s ease, box-shadow 0.2s ease; 
+} 
+
+.easter-tile {
+  aspect-ratio: 4 / 3; /* adjust to taste */
+  overflow: hidden;
+}
+
+.easter-tile img,
+.easter-tile video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.easter-hero-text-box {
+  background: linear-gradient(
+    135deg,
+    #f7e9ff 0%,
+    #ffeef5 40%,
+    #fff9e3 100%
+  );
+  border-radius: 14px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.cta-animated-card:hover { 
+  transform: translateY(-4px); 
+  box-shadow: 0 10px 24px rgba(0,0,0,0.35); 
+} 
+
+@keyframes colorFade { 
+  0% { background-color: var(--bs-secondary); } 
+  25% { background-color: var(--bs-primary); }
+  50% { background-color: var(--bs-danger); } 
+  75% { background-color: var(--bs-warning); }
+  100% { background-color: var(--bs-success); } 
+}
+
+.masonry-grid {
+  column-count: 4;
+  column-gap: 1rem;
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+
+.masonry-item img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.masonry-item .frame {
+  transition:
+    transform 420ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    box-shadow 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, box-shadow;
+}
+
+/* Hover effect for all frames */
+.masonry-item:hover .frame {
+  transform: scale(1.035) rotate(0.6deg);
+}
+
+/* Gold frames get the glow */
+.masonry-item:hover .frame.gold {
+  box-shadow: 0 0 28px rgba(255, 215, 0, 0.45);
+}
+
+/* Shared height for all three media elements */
+.hero-img,
+.hero-video {
+  height: 320px;          
+  width: 100%;
+  object-fit: cover;      
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Carousel items match height */
+.carousel-item {
+  height: 320px;
+  transition: opacity 1.4s cubic-bezier(0.25, 0.1, 0.25, 1), 
+              transform 1.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.carousel-item video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.invitation-img {
+  object-fit: contain;   
+  background: #f8f9fa;  
+  padding: 8px;           
+}
+
+/* christmas */
+.hero-text-box { 
+  position: relative; 
+  background: #ffffff; 
+  border: 1px solid #eaeaea; 
+  border-radius: 14px; 
+  padding: 40px 30px; 
+  max-width: 700px; 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06); 
+  margin: auto; 
+  overflow: visible;
+}
+
+/* Base holly style */ 
+.holly-corner { 
+  position: absolute; 
+  width: 58px; /* slightly smaller for elegance */ 
+  height: 58px; 
+  opacity: 0.78; /* soft but visible */ 
+  background-image: url('/images/christmas/images/hollycorner.jpg'); 
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  pointer-events: none; /* prevents accidental hover issues */ 
+  z-index: 5;
+}
+
+/* Top-left holly */ 
+.holly-top-left { 
+  top: -18px; 
+  left: -18px; 
+  transform: rotate(0deg); 
+}
+
+/* Bottom-right holly */ 
+.holly-bottom-right { 
+  bottom: -18px; 
+  right: -18px; 
+  transform: rotate(180deg); 
+}
+
+/* Carols (videos) */
+.carousel-video {
+  height: 360px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Festive treats (cake photos) */
+.carousel-photo {
+  height: 360px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Gift sharing (portrait photos — taller) */
+.carousel-portrait {
+  height: 520px; /* prevents head cropping */
+  width: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+} 
+
+.carousel-item {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  transition: transform 1s ease-in-out;
+}
+
+.moments-tile {
+  height: 280px; /* adjust to taste */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center; /* lowers the image */
+  justify-content: center;
+  background: #fff;
+  border-radius: 16px; /* rounded edges */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.moments-tile img {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+  border-radius: 12px; 
+}
+
+.moments-section {
+  margin-top: 60px; /* adjust to taste */
+}
+
+
+@media (max-width: 1200px) {
+  .masonry-grid { column-count: 3; }
+}
+@media (max-width: 768px) {
+  .masonry-grid { column-count: 2; }
+}
+@media (max-width: 576px) {
+  .masonry-grid { column-count: 1; }
+}
+
+.caption {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 2em;
+  color: #444;
+}
