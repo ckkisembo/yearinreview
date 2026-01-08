@@ -25,6 +25,13 @@
               </video>
             </div>
           <% }) %>
+          <!-- Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carolsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carolsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
         </div>
       </div>
     </div>
@@ -38,6 +45,13 @@
               <img src="<%= photo.url %>" class="carousel-photo">
             </div>
           <% }) %>
+          <!-- Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#treatsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#treatsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
         </div>
       </div>
     </div>
@@ -51,14 +65,18 @@
               <img src="<%= photo.url %>" class="carousel-portrait">
             </div>
           <% }) %>
+          <!-- Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#giftsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#giftsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
 
 <%- include("partials/footer.ejs") %>
 

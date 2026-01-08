@@ -185,6 +185,18 @@ body {
   justify-content: center; 
   align-items: center; 
   transition: transform 1s ease-in-out;
+  transition: transform 1.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) grayscale(100);
+  opacity: 0.7;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  opacity: 1;
 }
 
 .moments-tile {
@@ -210,7 +222,6 @@ body {
 .moments-section {
   margin-top: 60px; /* adjust to taste */
 }
-
 
 @media (max-width: 1200px) {
   .masonry-grid { column-count: 3; }
