@@ -5,7 +5,6 @@ import sharp from "sharp";
 import { fileURLToPath } from 'url';
 
 const app = express();
-const port = process.env.PORT || 3000;
 
 const __filename = fileURLToPath(import.meta.url); 
 const __dirname = path.dirname(__filename);
@@ -176,6 +175,7 @@ app.get("/ahead", (req, res) => {
     res.render("ahead.ejs");
 });
 
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
-    console.log(`Listening at port ${port}`);
+    console.log(`Server running on port ${port}`);
 })
